@@ -9,8 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
-	/*declerations*/
+	FILE *file;
+	stack_t **stack;
 
+	stack = malloc(sizeof(stack_t));
 	/*code*/
 	if (argc != 2)
 	{
@@ -24,7 +26,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	/*execution loop */
-
+	execute(file, stack);
 	/*free and close*/
 	fclose(file);
 	
