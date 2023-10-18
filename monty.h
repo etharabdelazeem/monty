@@ -61,6 +61,6 @@ int execute(FILE *file, stack_t **stack, unsigned int count, char *line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 void push_stack(stack_t **head);
-
+void freestack(stack_t *head);
 
 #endif
