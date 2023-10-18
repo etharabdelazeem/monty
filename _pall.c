@@ -5,7 +5,12 @@
  * @stack: to be diplayed
  * @line_number: line count
  */
-void pall(stack_t __attribute__((unused)) **stack, unsigned int __attribute__((unused)) line_number)
+void pall(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
-	printf("pall\n");
+	stack_t *head = *stack;
+	while (head)
+	{
+		printf("%d\n", head->n);
+		head = head->next;
+	}
 }

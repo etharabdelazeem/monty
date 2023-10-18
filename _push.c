@@ -5,7 +5,12 @@
  * @stack: to push into
  * @line_number: line count
  */
-void push(stack_t __attribute__((unused)) **stack, unsigned int __attribute__((unused)) line_number)
+void push(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
-	printf("push\n");
+	if (data.arg)
+		push_stack(stack);
+	else
+	{
+		printf("Some error");
+	}
 }

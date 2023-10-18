@@ -21,7 +21,6 @@ int execute(FILE *file, stack_t **stack, unsigned int count, char *line)
 
 	opcod = strtok(line, " \n\t");
 	data.arg = strtok(NULL, " \n\t");
-	printf("hello->%s %s", opcod, data.arg);
 	while (opset[i].opcode && opcod)
 	{
 		if (strcmp(opcod, opset[i].opcode) == 0)
