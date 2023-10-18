@@ -17,7 +17,7 @@ void push(stack_t **stack, unsigned int  linecount)
 			{
 				fprintf(stderr, "%d: usage: push integer", linecount);
 				fclose(data.file);
-				free(data.content);
+				free(data.line);
 				freestack(*stack);
 				exit(EXIT_FAILURE);
 			}
@@ -28,7 +28,7 @@ void push(stack_t **stack, unsigned int  linecount)
 	{
 		fprintf(stderr, "%d: usage: push integer\n", linecount);
 		fclose(data.file);
-		free(data.content);
+		free(data.line);
 		freestack(*stack);
 		exit(EXIT_FAILURE);
 	}
