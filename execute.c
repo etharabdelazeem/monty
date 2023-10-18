@@ -13,7 +13,8 @@ int execute(FILE *file, stack_t **stack, unsigned int count, char *line)
 {
 	instruction_t opset[] = {
 		{"push", push}, {"pall", pall},
-		{"pint", pint}, {"pop", pop}, {"swap", swap}, 
+		{"pint", pint}, {"pop", pop}, {"swap", swap},
+		{"nop", nop},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
