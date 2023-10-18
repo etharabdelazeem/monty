@@ -11,6 +11,7 @@ void push(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 		push_stack(stack);
 	else
 	{
-		printf("Some error");
+		printf("L<%d>: usage: push integer", line_number);
+		exit(EXIT_FAILURE);
 	}
 }
