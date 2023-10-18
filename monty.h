@@ -65,4 +65,6 @@ void pall(stack_t **stack, unsigned int line_number);
 void push_stack(stack_t **head);
 void freestack(stack_t *head);
 void pint(stack_t **stack, unsigned int linecount);
+void nop(stack_t **stack, unsigned int linecount);
+
 #endif
