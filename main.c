@@ -38,6 +38,8 @@ int main(int argc, char *argv[])
 	printf("hi again\n");
 	/*execution loop */
 	r = getline(&content, &size, file);
+	if (!r)
+		printf("noo");
 	linecount++;
 	execute(file, &stack, linecount, content);
 	/*free and close*/
