@@ -9,7 +9,7 @@
 
 #define BUFFER 1024
 
-
+/*  Structs  */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -26,7 +26,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -41,6 +40,23 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+/**
+ * struct data_s - holds values of file, content of line
+ * @arg: value
+ * @file: pointer to monty file
+ * @line: line content
+ * @
+ */
+typedef struct data_s
+{
+	char *arg;
+	FILE *file;
+	char *line;
+	/*int lifi;*/
+}  data_t;
+extern data_t data;
+
+/*  Functions  */
 int execute(FILE *file, stack_t **stack, unsigned int count, char *line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);

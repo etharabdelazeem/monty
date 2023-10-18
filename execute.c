@@ -4,8 +4,8 @@
  * execute - function to execute the opcode
  * @file: the monty file
  * @stack: The stack
- * @
- * @
+ * @count: line count
+ * @line: content of a single line
  *
  * Return: 0 on failure - 1 on success
  */
@@ -20,7 +20,8 @@ int execute(FILE *file, stack_t **stack, unsigned int count, char *line)
 	char *opcod;
 
 	opcod = strtok(line, " \n\t");
-	printf("hello");
+	data.arg = strtok(NULL, " \n\t");
+	printf("hello->%s %s", opcod, data.arg);
 	while (opset[i].opcode && opcod)
 	{
 		if (strcmp(opcod, opset[i].opcode) == 0)
