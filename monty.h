@@ -57,6 +57,7 @@ typedef struct data_s
 extern data_t data;
 
 /*  Functions  */
+void pop(stack_t **stack, unsigned int linecount);
 int execute(FILE *file, stack_t **stack, unsigned int count, char *line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
