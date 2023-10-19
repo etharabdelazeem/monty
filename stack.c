@@ -1,11 +1,19 @@
 #include "monty.h"
 
+/**
+ * mallocerror - prints error message
+ * Return: nothing
+ */
 void mallocerror(void)
 {
 	printf("Malloc error");
 	exit(0);
 }
 
+/**
+ * push_stack - push int to the stack
+ * @head: the stack head
+ */
 void push_stack(stack_t **head)
 {
 	stack_t *new, *temp = *head;

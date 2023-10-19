@@ -8,6 +8,7 @@
 void pall(stack_t **stack, unsigned int __attribute__((unused)) line_number)
 {
 	stack_t *head = *stack;
+
 	while (head)
 	{
 		printf("%d\n", head->n);
