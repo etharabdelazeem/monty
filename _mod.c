@@ -5,7 +5,7 @@
  * top element.
  * @stack: to divide its elements and find modulus
  * @line_number: line counter
- * 
+ *
  * Return: nothing or exit failure if we have less than 2 elements in the stack
  */
 void mod(stack_t **stack, unsigned int line_number)
