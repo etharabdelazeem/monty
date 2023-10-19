@@ -34,5 +34,5 @@ int main(int argc, char *argv[])
 	free(line);
 	freestack(stack);
 	fclose(data.file);
-	exit (EXIT_SUCCESS);
+	exit(EXIT_SUCCESS);
 }
