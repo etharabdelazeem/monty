@@ -56,7 +56,16 @@ typedef struct data_s
 }  data_t;
 extern data_t data;
 
-/*  Functions  */
+/*  ================== Functions ===================  */
+
+/* helpers_main.c */
+void check_usage(int argc);
+
+/* helpersmain_fe.c */
+void get_file(char *file_name);
+void file_open_error(char *file_name);
+
+
 void pop(stack_t **stack, unsigned int linecount);
 void add(stack_t **stack, unsigned int linecount);
 void swap(stack_t **stack, unsigned int linecount);
