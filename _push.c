@@ -11,11 +11,13 @@ void push(stack_t **stack, unsigned int  linecount)
 
 	if (data.arg)
 	{
-		for (i = 0; data.arg[i] != '\0'; i++)
+		if (data.arg[0] == '-')
+			i++;
+		for (; data.arg[i] != '\0'; i++)
 		{
 			if (data.arg[i] < 48 || data.arg[i] > 57)
 			{
-				fprintf(stderr, "%d: usage: push integer", linecount);
+				fprintf(stderr, "L%d: usage: push integer", linecount);
 				fclose(data.file);
 				free(data.line);
 				freestack(*stack);
@@ -26,7 +28,7 @@ void push(stack_t **stack, unsigned int  linecount)
 	}
 		else
 	{
-		fprintf(stderr, "%d: usage: push integer\n", linecount);
+		fprintf(stderr, "L%d: usage: push integer\n", linecount);
 		fclose(data.file);
 		free(data.line);
 		freestack(*stack);

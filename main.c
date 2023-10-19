@@ -17,14 +17,6 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t r = 1;
 
-	/*
-	stack = malloc(sizeof(stack_t));
-	if (!stack)
-	{
-		fprintf(stderr, "Error: malloc failed");
-		exit(EXIT_FAILURE);
-	}
-	*/
 	/*code*/
 	check_usage(argc);
 	get_file(argv[1]);
