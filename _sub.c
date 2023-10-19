@@ -24,6 +24,8 @@ void sub(stack_t **stack, unsigned int line_number)
 
 	free(head);
 	*stack = head2;
+	if (!(*stack))
+		return;
 	(*stack)->prev = NULL;
 
 }
