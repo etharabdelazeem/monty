@@ -81,5 +81,6 @@ void pint(stack_t **stack, unsigned int linecount);
 void nop(stack_t **stack, unsigned int linecount);
 void pchar(stack_t **stack, unsigned int linecount);
 void pstr(stack_t **stack, unsigned int linecount);
+void rotl(stack_t **stack, unsigned int linecount);
 
 #endif
