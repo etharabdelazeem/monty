@@ -65,13 +65,12 @@ void check_usage(int argc);
 void get_file(char *file_name);
 void file_open_error(char *file_name);
 
-
-void pop(stack_t **stack, unsigned int linecount);
-void add(stack_t **stack, unsigned int linecount);
-void swap(stack_t **stack, unsigned int linecount);
 int execute(FILE *file, stack_t **stack, unsigned int count, char *line);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int linecount);
+void add(stack_t **stack, unsigned int linecount);
+void swap(stack_t **stack, unsigned int linecount);
 void sub(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
@@ -81,4 +80,6 @@ void freestack(stack_t *head);
 void pint(stack_t **stack, unsigned int linecount);
 void nop(stack_t **stack, unsigned int linecount);
 void pchar(stack_t **stack, unsigned int linecount);
+void pstr(stack_t **stack, unsigned int linecount);
+
 #endif
