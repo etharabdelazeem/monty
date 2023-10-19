@@ -3,15 +3,33 @@
 /**
  * push - push into stack
  * @stack: to push into
- * @line_number: line count
+ * @linecount: line count
  */
-void push(stack_t **stack, unsigned int __attribute__((unused)) line_number)
+void push(stack_t **stack, unsigned int  linecount)
 {
+	int i = 0;
+
 	if (data.arg)
-		push_stack(stack);
-	else
 	{
-		printf("L<%d>: usage: push integer", line_number);
+		for (i = 0; data.arg[i] != '\0'; i++)
+		{
+			if (data.arg[i] < 48 || data.arg[i] > 57)
+			{
+				fprintf(stderr, "%d: usage: push integer", linecount);
+				fclose(data.file);
+				free(data.line);
+				freestack(*stack);
+				exit(EXIT_FAILURE);
+			}
+		}
+		push_stack(stack);
+	}
+		else
+	{
+		fprintf(stderr, "%d: usage: push integer\n", linecount);
+		fclose(data.file);
+		free(data.line);
+		freestack(*stack);
 		exit(EXIT_FAILURE);
 	}
 }

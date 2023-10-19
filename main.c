@@ -18,6 +18,12 @@ int main(int argc, char *argv[])
 	size_t size = 0;
 	ssize_t r = 1;
 
+	stack = malloc(sizeof(stack_t));
+	if (!stack)
+	{
+		printf("WRITE MALLOC ERROR TP STDERR");
+		exit(EXIT_FAILURE);
+	}
 	/*code*/
 	if (argc != 2)
 	{
@@ -44,6 +50,5 @@ int main(int argc, char *argv[])
 	}
 	/*free and close*/
 	fclose(file);
-
 	return (0);
 }
