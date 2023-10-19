@@ -30,9 +30,9 @@ int main(int argc, char *argv[])
 		data.line = line;
 		if (r > 0)
 			execute(data.file, &stack, linecount, line);
-		free(line);
 	}
+	free(line);
 	freestack(stack);
 	fclose(data.file);
-	return (0);
+	exit (EXIT_SUCCESS);
 }
