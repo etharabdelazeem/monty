@@ -15,18 +15,3 @@ void check_usage(int argc)
 	fprintf(stderr, "USAGE: monty file\n");
 	exit(EXIT_FAILURE);
 }
-
-/**
- * initialize_program - define data
- *
- * Return: nothing, or exit failure
- *
- * void initialize_program(void)
- *{
- *	data = malloc(sizeof(data_t));
- *	if (!data)
- *		malloc_failure();
- *
- *	data = {NULL, NULL, NULL};
- *}
- */
