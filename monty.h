@@ -52,7 +52,7 @@ typedef struct data_s
 	char *arg;
 	FILE *file;
 	char *line;
-	/*int lifi;*/
+	int sq_flag;
 }  data_t;
 extern data_t data;
 
@@ -75,13 +75,19 @@ void sub(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void divide(stack_t **stack, unsigned int line_number);
 void mod(stack_t **stack, unsigned int line_number);
+
+void mallocerror(void);
+void _stack(stack_t **stack, unsigned int linecount);
 void push_stack(stack_t **head);
 void freestack(stack_t *head);
+
 void pint(stack_t **stack, unsigned int linecount);
 void nop(stack_t **stack, unsigned int linecount);
 void pchar(stack_t **stack, unsigned int linecount);
 void pstr(stack_t **stack, unsigned int linecount);
 void rotl(stack_t **stack, unsigned int linecount);
 void rotr(stack_t **stack, unsigned int linecount);
+void queue(stack_t **stack, unsigned int linecount);
+void push_queue(stack_t **head);
 
 #endif

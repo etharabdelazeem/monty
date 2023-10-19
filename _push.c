@@ -24,9 +24,8 @@ void push(stack_t **stack, unsigned int  linecount)
 				exit(EXIT_FAILURE);
 			}
 		}
-		push_stack(stack);
 	}
-		else
+	else
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", linecount);
 		fclose(data.file);
@@ -34,4 +33,8 @@ void push(stack_t **stack, unsigned int  linecount)
 		freestack(*stack);
 		exit(EXIT_FAILURE);
 	}
+	if (data.sq_flag == 0)
+		push_stack(stack);
+	else
+		push_queue(stack);
 }

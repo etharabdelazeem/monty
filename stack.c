@@ -6,8 +6,23 @@
  */
 void mallocerror(void)
 {
-	fprintf(stderr, "Malloc error\n");
+	fprintf(stderr, "Error: malloc failed\n");
 	exit(EXIT_FAILURE);
+}
+
+/**
+ * _stack - changes to stack mode\ sets the sq_flag
+ * @stack: head of the linked list
+ * @linecount: the linecounter
+ *
+ * Return: nothing
+ */
+void _stack(stack_t **stack, unsigned int linecount)
+{
+	(void)stack;
+	(void)linecount;
+
+	data.sq_flag = 0;
 }
 
 /**

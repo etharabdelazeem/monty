@@ -1,6 +1,6 @@
 #include "monty.h"
 
-data_t data = {NULL, NULL, NULL};
+data_t data = {NULL, NULL, NULL, 0};
 
 /**
  * main - monty code interpreter
