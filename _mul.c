@@ -1,18 +1,18 @@
 #include "monty.h"
 
 /**
- * sub - subtract the top element of the stack from the second top element.
- * @stack: to sub its elements
+ * mul - multiplies the second top element of the stack with the top element.
+ * @stack: to multiply its elements
  * @line_number: line counter
  * Return: nothing or exit failure if we have less than 2 elements in the stack
  */
-void sub(stack_t **stack, unsigned int line_number)
+void mul(stack_t **stack, unsigned int line_number)
 {
 	stack_t *head = *stack, *head2;
 
 	if (!head || !head->next)
 	{
-		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%d: can't mul, stack too short\n", line_number);
 		fclose(data.file);
 		free(data.line);
 		freestack(*stack);
@@ -20,10 +20,12 @@ void sub(stack_t **stack, unsigned int line_number)
 	}
 
 	head2 = head->next;
-	head2->n = head2->n - head->n;
+	head2->n = head2->n * head->n;
 
 	free(head);
 	*stack = head2;
+	if (!(*stack))
+		return;
 	(*stack)->prev = NULL;
 
 }
