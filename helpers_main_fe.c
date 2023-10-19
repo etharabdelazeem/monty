@@ -22,10 +22,7 @@ void file_open_error(char *file_name)
  */
 void get_file(char *file_name)
 {
-	FILE *file;
-
-	file = fopen(file_name, "r");
-	if (!file)
+	data.file = fopen(file_name, "r");
+	if (!(data.file))
 		file_open_error(file_name);
-	data.file = file;
 }
