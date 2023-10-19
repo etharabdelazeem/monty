@@ -17,7 +17,7 @@ void push(stack_t **stack, unsigned int  linecount)
 		{
 			if (data.arg[i] < 48 || data.arg[i] > 57)
 			{
-				fprintf(stderr, "L%d: usage: push integer", linecount);
+				fprintf(stderr, "L%d: usage: push integer\n", linecount);
 				fclose(data.file);
 				free(data.line);
 				freestack(*stack);

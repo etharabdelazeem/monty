@@ -22,7 +22,7 @@ int execute(FILE *file, stack_t **stack, unsigned int count, char *line)
 	char *opcod;
 
 	opcod = strtok(line, " \n\t");
-	if (opcod[0] == '#')
+	if (!opcod || opcod[0] == '#')
 		return (1);
 	data.arg = strtok(NULL, " \n\t");
 	while (opset[i].opcode && opcod)
