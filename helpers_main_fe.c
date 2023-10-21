@@ -8,7 +8,7 @@
  */
 void file_open_error(char *file_name)
 {
-	fprintf(stderr, "Error: can't open file %s\n", file_name);
+	fprintf(stderr, "Error: Can't open file %s\n", file_name);
 	/*free_data();*/
 	/*freestack(stack);*/
 	exit(EXIT_FAILURE);
